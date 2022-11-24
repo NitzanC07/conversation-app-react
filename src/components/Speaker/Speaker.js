@@ -30,7 +30,7 @@ function Speaker(props) {
                 className="speaker__button speaker__send" 
                 type="button"
                 onClick={handleChangeSpeaker}
-            >Send</button>
+            />
         </section>
     )
 }

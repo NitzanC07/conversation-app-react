@@ -14,7 +14,7 @@ function Popup(props) {
     return(
         <div className={`popup-container ${props.isOpen ? 'popup-container_open' : ''}`}>
             <div className="popup">
-                <button className="popup__close" onClick={ () => {props.onClose()} }>X</button>
+                <button className="popup__close" onClick={ () => {props.onClose()} } />
                 <h2 className="popup__title">{props.title}</h2>
 
                 { props.children }

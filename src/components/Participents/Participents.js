@@ -2,6 +2,7 @@ import './participents.css';
 import './__button/participents__button.css';
 import './__names/participents__names.css';
 import './__title/participents__title.css';
+import addPersonIcon from '../../images/icons/add-person-icon.svg';
 
 function Participents(props) {
 
@@ -19,7 +20,7 @@ function Participents(props) {
                 className="participents__button participents__add-one"
                 onClick={openAddParticipentPopup}
             >
-                add
+                <img src={addPersonIcon} alt='Add participent to the conversation' />
             </button>
         </section>
     )

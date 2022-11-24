@@ -4,6 +4,9 @@ import './__conversation-field/chat-container__conversation-field.css';
 import './__message/chat-container__message.css';
 import './__nav/chat-container__nav.css';
 import './__title/chat-container__title.css';
+import emailIcon from '../../images/icons/email-icon.svg';
+import guideIcon from '../../images/icons/guide-icon.svg';
+import infoIcon from '../../images/icons/info-icon.svg';
 
 function ChatContainer(props) {
 
@@ -29,15 +32,21 @@ function ChatContainer(props) {
                 <button 
                     className="chat-container__button chat-container__button__send-email"
                     onClick={openPopupSendEmail}
-                >email</button>
+                >
+                    <img src={emailIcon} alt='Send email' />
+                </button>
                 <button 
                     className="chat-container__button chat-container__button__guide"
                     onClick={openPopupGuide}
-                >guide</button>
+                >
+                    <img src={guideIcon} alt='Guide for the application' />
+                </button>
                 <button 
                     className="chat-container__button chat-container__button__information"
                     onClick={openPopupInformation}
-                >info</button>
+                >
+                    <img src={infoIcon} alt='Information about the application' />
+                </button>
             </div>
         </section>      
     )
