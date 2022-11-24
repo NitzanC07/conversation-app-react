@@ -1,0 +1,8 @@
+.chat-container__nav {
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    background-color: rgba(0, 0, 0, 0);
+    border-top: 1px solid #999;
+}
