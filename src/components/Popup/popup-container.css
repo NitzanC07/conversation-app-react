@@ -1,10 +1,8 @@
 .popup-container {
-    /* visibility: hidden; */
-    /* transition: 0.1s linear; */
-    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
     z-index: 1;
     width: 100vw;
-    /* min-width: 200px; */
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;

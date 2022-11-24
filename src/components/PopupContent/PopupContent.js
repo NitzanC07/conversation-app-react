@@ -6,6 +6,8 @@ function PopupContent(props) {
         <Popup
             name="content"
             title="אודות"
+            isOpen={props.isOpen}
+            onClose={props.onClose}
         >
             <div className="popup__info">
                 <p>מטרת היישום לאפשר למי שלא יכול לדבר בקול להביע דעתו.</p>

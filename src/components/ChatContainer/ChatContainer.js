@@ -7,6 +7,10 @@ import './__title/chat-container__title.css';
 
 function ChatContainer(props) {
 
+    function openPopupInformation() {
+        props.handlePopupContentOpen();
+    }
+
     return (
         <section className="chat-container">
             <h2 className="chat-container__title">חלון שיחה:</h2>
@@ -16,12 +20,11 @@ function ChatContainer(props) {
             <div className="chat-container__nav">
                 <button className="chat-container__button chat-container__button__send-email">email</button>
                 <button className="chat-container__button chat-container__button__guide">guide</button>
-                <button className="chat-container__button chat-container__button__information">info</button>
+                <button 
+                    className="chat-container__button chat-container__button__information"
+                    onClick={openPopupInformation}
+                >info</button>
             </div>
-
-            {/* <template id="message">
-                <li className="chat-container__message"></li>
-            </template>                     */}
         </section>      
     )
 }
