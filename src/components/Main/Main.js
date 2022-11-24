@@ -1,26 +1,40 @@
+import './main.css';
 import { useState } from 'react';
 import ChatContainer from '../ChatContainer/ChatContainer';
 import Participents from '../Participents/Participents';
 import Speaker from '../Speaker/Speaker';
 import PopupAddParticipent from '../PopupAddParticipent/PopupAddParticipent';
-import './main.css';
 import PopupContent from '../PopupContent/PopupContent';
+import PopupSendEmail from '../PopupSendEmail/PopupSendEmail';
+import PopupGuide from '../PopupGuide/PopupGuide';
 
 function Main(props) {
 
     const [popupAddParticipentIsOpen, setPopupAddParticipentIsOpen] = useState(false);
     const [popupContentIsOpen, setPopupContentIsOpen] = useState(false);
+    const [popupSendEmailIsOpen, setPopupSendEmailIsOpen] = useState(false);
+    const [popupGuideIsOpen, setPopupGuideIsOpen] = useState(false);
 
     function closeAllPopup() {
         setPopupAddParticipentIsOpen(false);
         setPopupContentIsOpen(false);
+        setPopupSendEmailIsOpen(false);
+        setPopupGuideIsOpen(false);
     }
     function handleAddParticipentOpen() {
         setPopupAddParticipentIsOpen(true);
     }
 
-    function handleContentPopupOpen() {
+    function handlePopupSendEmailOpen() {
+        setPopupSendEmailIsOpen(true);
+    }
+
+    function handlePopupContentPopupOpen() {
         setPopupContentIsOpen(true);
+    }
+
+    function handlePopupGuideOpen() {
+        setPopupGuideIsOpen(true);
     }
 
     return(
@@ -33,7 +47,9 @@ function Main(props) {
             <Speaker />
 
             <ChatContainer 
-                handlePopupContentOpen={handleContentPopupOpen}
+                handlePopupContentOpen={handlePopupContentPopupOpen}
+                handlePopupSendEmailOpen={handlePopupSendEmailOpen}
+                handlePopupGuideOpen={handlePopupGuideOpen}
             />
 
             <PopupAddParticipent 
@@ -42,6 +58,16 @@ function Main(props) {
             />
             <PopupContent 
                 isOpen={popupContentIsOpen}
+                onClose={closeAllPopup}
+            />
+
+            <PopupSendEmail 
+                isOpen={popupSendEmailIsOpen}
+                onClose={closeAllPopup}
+            />
+
+            <PopupGuide 
+                isOpen={popupGuideIsOpen}
                 onClose={closeAllPopup}
             />
             

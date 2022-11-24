@@ -1,3 +1,8 @@
+import '../Popup/__form/popup__form.css';
+import '../Popup/__form/__input/popup__form__input.css';
+import '../Popup/__form/__input-field/popup__form__input-field.css';
+import '../Popup/__form/__label/popup__form__label.css';
+import '../Popup/__form/__submit-button/popup__form__submit-button.css';
 import Popup from "../Popup/Popup";
 import { useState } from 'react';
 

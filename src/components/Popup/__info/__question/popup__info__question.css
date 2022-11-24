@@ -1,0 +1,8 @@
+.popup__info__question {
+    font-family: 'Rubik', 'Yehuda', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    margin: 15px 0 0; 
+}

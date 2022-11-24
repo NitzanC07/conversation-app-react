@@ -1,0 +1,8 @@
+.popup__info__text {
+    font-family: 'Rubik', 'Yehuda', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    margin: 0 0 10px;
+}

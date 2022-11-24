@@ -3,11 +3,11 @@ import './popup.css';
 import './_open/popup-container_open.css';
 import './__title/popup__title.css';
 import './__close/popup__close.css';
-import './__form/popup__form.css';
-import './__form/__input/popup__form__input.css';
-import './__form/__input-field/popup__form__input-field.css';
-import './__form/__label/popup__form__label.css';
-import './__form/__submit-button/popup__form__submit-button.css';
+import './__info/popup__info.css';
+import './__info/__text/popup__info__text.css';
+import './__info/__question/popup__info__question.css';
+import './__info/__answer/popup__info__answer.css';
+import './__icons/popup__icons.css';
 
 function Popup(props) {
 

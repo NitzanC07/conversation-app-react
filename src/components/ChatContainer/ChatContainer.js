@@ -11,6 +11,14 @@ function ChatContainer(props) {
         props.handlePopupContentOpen();
     }
 
+    function openPopupSendEmail() {
+        props.handlePopupSendEmailOpen();
+    }
+
+    function openPopupGuide() {
+        props.handlePopupGuideOpen();
+    }
+
     return (
         <section className="chat-container">
             <h2 className="chat-container__title">חלון שיחה:</h2>
@@ -18,8 +26,14 @@ function ChatContainer(props) {
                 
             </ul>
             <div className="chat-container__nav">
-                <button className="chat-container__button chat-container__button__send-email">email</button>
-                <button className="chat-container__button chat-container__button__guide">guide</button>
+                <button 
+                    className="chat-container__button chat-container__button__send-email"
+                    onClick={openPopupSendEmail}
+                >email</button>
+                <button 
+                    className="chat-container__button chat-container__button__guide"
+                    onClick={openPopupGuide}
+                >guide</button>
                 <button 
                     className="chat-container__button chat-container__button__information"
                     onClick={openPopupInformation}
