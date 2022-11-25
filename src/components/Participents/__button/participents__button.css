@@ -1,6 +1,7 @@
 .participents__button {
     width: 140px;
-    height: 70px;
+    height: 60px;
+    margin: 0 0 15px;
     cursor: pointer;
     font-size: 20px;
     background-color: rgba(194, 253, 255, 1);

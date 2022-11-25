@@ -10,6 +10,11 @@ function PopupAddParticipent(props) {
 
     const [participentName, setParticipentName] = useState('')
 
+    function submitAddNewPerson(e) {
+        e.preventDefault();
+        props.createNewParticipent(participentName);
+    }
+
     return(
         <Popup 
             name="add-participent"
@@ -17,7 +22,7 @@ function PopupAddParticipent(props) {
             isOpen={props.isOpen}
             onClose={props.onClose}
         >
-            <form className="popup__form">
+            <form className="popup__form" onSubmit={submitAddNewPerson}>
                 <div className="popup__form__input-field">
                     <label className="popup__form__label" htmlFor="message-content">שם:
                         <input 
@@ -31,7 +36,12 @@ function PopupAddParticipent(props) {
                         />
                     </label>
                 </div>                
-                <button className="popup__form__submit-button" type="submit">צרף לשיחה</button>
+                <button 
+                    className="popup__form__submit-button" 
+                    type="submit"
+                >
+                    צרף לשיחה
+                </button>
             </form>
         </Popup>
     )

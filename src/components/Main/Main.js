@@ -14,6 +14,9 @@ function Main(props) {
     const [popupContentIsOpen, setPopupContentIsOpen] = useState(false);
     const [popupSendEmailIsOpen, setPopupSendEmailIsOpen] = useState(false);
     const [popupGuideIsOpen, setPopupGuideIsOpen] = useState(false);
+    const [participentsList, setParticipentsList] = useState([]);
+    const [currentSpeaker, setCurrentSpeaker] = useState('דובר');
+    const [messagesContentList, setMessageContentList] = useState([]);
 
     function closeAllPopup() {
         setPopupAddParticipentIsOpen(false);
@@ -37,24 +40,45 @@ function Main(props) {
         setPopupGuideIsOpen(true);
     }
 
+    function createParticipentsList(newUser) {
+        setParticipentsList([...participentsList, newUser])
+        closeAllPopup();
+    }
+
+    function handleCurrentSpeaker(name) {
+        setCurrentSpeaker(name);
+    }
+
+    function handleMessagesList(message) {
+        setMessageContentList([...messagesContentList, message]);
+    }
+
     return(
         <main className="main">
 
             <Participents 
                 handlePopupOpen={handleAddParticipentOpen}
+                participentsList={participentsList}
+                handleCurrentSpeaker={handleCurrentSpeaker}
+
             />
 
-            <Speaker />
+            <Speaker 
+                currentSpeaker={currentSpeaker}
+                handleMessagesList={handleMessagesList}
+            />
 
             <ChatContainer 
                 handlePopupContentOpen={handlePopupContentPopupOpen}
                 handlePopupSendEmailOpen={handlePopupSendEmailOpen}
                 handlePopupGuideOpen={handlePopupGuideOpen}
+                messagesContentList={messagesContentList}
             />
 
             <PopupAddParticipent 
                 isOpen={popupAddParticipentIsOpen}
                 onClose={closeAllPopup}
+                createNewParticipent={createParticipentsList}
             />
             <PopupContent 
                 isOpen={popupContentIsOpen}
