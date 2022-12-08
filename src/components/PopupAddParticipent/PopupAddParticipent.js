@@ -13,6 +13,7 @@ function PopupAddParticipent(props) {
     function submitAddNewPerson(e) {
         e.preventDefault();
         props.createNewParticipent(participentName);
+        setParticipentName('');
     }
 
     return(

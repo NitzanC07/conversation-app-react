@@ -53,6 +53,19 @@ function Main(props) {
         setMessageContentList([...messagesContentList, message]);
     }
 
+    function submitSendEmail(email, subject) {
+        console.log('Send E-Mail...');
+        console.log(messagesContentList);
+        let conversationStamp
+        messagesContentList.forEach(messageData => {
+            conversationStamp += `${messageData.speakerName} (${messageData.timeStamp}): ${messageData.messageContent}%0D%0A`
+        })
+        console.log(conversationStamp);
+
+        window.open(`mailto:${email}?subject=${subject}&body=${conversationStamp}`)
+        closeAllPopup();
+    }
+
     return(
         <main className="main">
 
@@ -88,6 +101,7 @@ function Main(props) {
             <PopupSendEmail 
                 isOpen={popupSendEmailIsOpen}
                 onClose={closeAllPopup}
+                onSubmit={submitSendEmail}
             />
 
             <PopupGuide 

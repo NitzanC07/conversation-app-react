@@ -6,6 +6,13 @@ function PopupSendEmail(props) {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
 
+    function submitSendEmail(e) {
+        e.preventDefault();
+        props.onSubmit(email, subject);
+        setEmail('');
+        setSubject('');
+    }
+
     return(
         <Popup 
             name="send-email"
@@ -13,7 +20,7 @@ function PopupSendEmail(props) {
             isOpen={props.isOpen}
             onClose={props.onClose}
         >
-            <form className="popup__form">
+            <form className="popup__form" onSubmit={submitSendEmail}>
                 <div className="popup__form__input-field">
                     <label className="popup__form__label">דוא"ל:
                         <input 

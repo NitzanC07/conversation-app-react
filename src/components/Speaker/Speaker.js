@@ -8,6 +8,18 @@ import { useEffect, useState } from 'react';
 
 function Speaker(props) {
 
+    const [hour, setHour] = useState(String(new Date().getHours()).padStart(2, '0'));
+    const [minutes, setMinutes] = useState(String(new Date().getMinutes()).padStart(2, '0'));
+    
+    useEffect(() => {
+        setInterval(() => tick(), 60*1000);
+        }, [])
+    
+    function tick() {
+        setHour(String(new Date().getHours()).padStart(2, '0'));
+        setMinutes(String(new Date().getMinutes()).padStart(2, '0'));
+    }
+
     const [speakerName, setSpeakerName] = useState('דובר')
     const [messageContent, setMessageContent] = useState('');
 
@@ -17,9 +29,12 @@ function Speaker(props) {
 
     function handleChangeSpeaker(e) {
         e.preventDefault();
-        props.handleMessagesList({ speakerName, messageContent })
-        setMessageContent('')
-        setSpeakerName('דובר');
+        props.handleMessagesList({ 
+            speakerName, 
+            messageContent, 
+            timeStamp: `${hour}:${minutes}`
+        });
+        setMessageContent('');
     }
 
     return(
