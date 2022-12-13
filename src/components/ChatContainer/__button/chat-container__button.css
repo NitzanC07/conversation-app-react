@@ -19,3 +19,10 @@
     background-color: rgba(194, 253, 255, 0.7);
     background-color: rgba(221, 255, 194, 0.7);
 }
+
+@media screen and (max-width: 600px) {
+    .chat-container__button {
+        width: 60px;
+        height: 40px;
+    }
+}

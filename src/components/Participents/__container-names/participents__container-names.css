@@ -1,0 +1,8 @@
+.participents__container-names {
+    margin: 0;
+    padding: 0;
+    width: 95%;
+    height: 85%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

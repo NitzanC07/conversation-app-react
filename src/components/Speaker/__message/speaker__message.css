@@ -13,3 +13,9 @@
 .speaker__message:focus {
     outline: 0;
 }
+
+@media screen and (max-width: 600px) {
+    .speaker__message {
+        width: 100%;
+    }
+}

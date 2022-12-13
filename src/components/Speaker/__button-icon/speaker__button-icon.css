@@ -1,0 +1,9 @@
+.speaker__button-icon {
+    width: 50px;
+}
+
+@media screen  and (max-width: 600px) {
+    .speaker__button-icon {
+        width: 28px;
+    }
+}

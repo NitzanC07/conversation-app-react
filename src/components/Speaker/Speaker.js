@@ -1,10 +1,12 @@
 import './speaker.css';
 import './__button/speaker__button.css';
+import './__button-icon/speaker__button-icon.css';
 import './__form/speaker__form.css';
 import './__message-field/speaker__message-field.css';
 import './__name/speaker__name.css';
 import './__message/speaker__message.css';
 import { useEffect, useState } from 'react';
+import talkSVG from '../../images/icons/talk.svg';
 
 function Speaker(props) {
 
@@ -54,7 +56,9 @@ function Speaker(props) {
                 <button 
                     className="speaker__button speaker__send" 
                     type="submit"
-                />
+                >
+                    <img className='speaker__button-icon' src={talkSVG} alt='Send message' />
+                </button>
             </form>
             
         </section>

@@ -6,3 +6,9 @@
     background-color: rgba(0, 0, 0, 0);
     border-top: 1px solid #999;
 }
+
+@media screen and (max-width: 600px) {
+    .chat-container__nav {
+        justify-content:space-around;
+    }
+}

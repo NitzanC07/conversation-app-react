@@ -1,6 +1,5 @@
 import './header.css';
 import './__title/header__title.css';
-import './__time/header__time.css';
 import './__content/header__content.css';
 import { useState, useEffect } from 'react';
 
@@ -25,11 +24,7 @@ function Header(props) {
     return(
         <header className="header">
             <p className="header__title">מקליד את דעתי</p>
-            <div className='header__time'>
-                <p className="header__content">{day}.{month}.{year}</p>
-                <p className="header__content"></p>
-            </div>
-            
+            <p className="header__content">{day}.{month}.{year}</p>
         </header>
     )
 }

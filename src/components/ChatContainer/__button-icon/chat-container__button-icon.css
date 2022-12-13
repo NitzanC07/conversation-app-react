@@ -1,0 +1,10 @@
+.chat-container__button-icon {
+    
+}
+
+
+@media screen and (max-width: 600px) {
+    .chat-container__button-icon {
+        width: 40px;
+    }
+}

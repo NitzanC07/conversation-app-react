@@ -5,3 +5,9 @@
     align-items: center;
     width: 95%;
 }
+
+@media screen and (max-width: 600px) {
+    .speaker__form {
+        width: 90%;
+    }
+}

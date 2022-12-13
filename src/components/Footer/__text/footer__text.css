@@ -4,3 +4,10 @@
     color: #bebebe;
     margin: 0 15px;
 }
+
+@media screen and (max-width: 600px) {
+    .footer__text {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}

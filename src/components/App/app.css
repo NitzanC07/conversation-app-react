@@ -6,6 +6,6 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content:space-evenly;
   background-color: rgb(19, 0, 88);
 }

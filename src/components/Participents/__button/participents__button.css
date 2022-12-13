@@ -23,11 +23,8 @@
 
 @media screen  and (max-width: 600px) {
     .participents__button {
-        position: absolute;
-            bottom: 15px;
-            left: 15px;
-        width: 100px;
-        height: 50px;
+        width: 60px;
+        height: 30px;
 
     }
 }

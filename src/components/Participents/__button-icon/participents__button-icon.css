@@ -1,0 +1,9 @@
+.participents__button-icon {
+    width: 60px;
+}
+
+@media screen  and (max-width: 600px) {
+    .participents__button-icon {
+        width: 25px;
+    }
+}

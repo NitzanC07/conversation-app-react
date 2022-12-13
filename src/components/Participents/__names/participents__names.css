@@ -1,15 +1,24 @@
 .participents__names {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    height: 80%;
     padding: 0;
-    margin: 0;
+    margin: 0 20px;
 }
 
 @media screen and (max-width: 600px) {
     .participents__names {
+        margin: 10px;
+        width: 400px;
         flex-direction: row;
-        height: fit-content;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
     }
+}
+
+@media screen and (max-width: 450px) {
+    .participents__names {
+        width:  300px;
+    }
+    
 }
