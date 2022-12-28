@@ -1,11 +1,6 @@
 .chat-container__box {
     margin: 0;
     padding: 0;
-    overflow-y: scroll;    
-}
-
-@media screen and (max-width: 600px) {
-    .chat-container__box {
-        height: 100%;
-    }    
+    overflow-y: scroll;  
+    height: 100%;  
 }

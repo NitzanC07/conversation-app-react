@@ -34,20 +34,23 @@ function ChatContainer(props) {
 
     return (
         <section className="chat-container">
-            <div className='chat-container__box'>
-                <h2 className="chat-container__title">חלון שיחה:</h2>
-                <ul className="chat-container__conversation-field">
-                    {
-                        messagesList.map((messageData, i) => (
-                            <ChatOneMessage 
-                                key={i}
-                                message={messageData.messageContent}
-                                speaker={messageData.speakerName}
-                            />
-                        ))
-                    }
-                </ul>
-            </div>
+<h2 className="chat-container__title">חלון שיחה:</h2>    
+                
+                <div className='chat-container__box'>
+                
+                    <ul className="chat-container__conversation-field">
+                        {
+                            messagesList.map((messageData, i) => (
+                                <ChatOneMessage 
+                                    key={i}
+                                    message={messageData.messageContent}
+                                    speaker={messageData.speakerName}
+                                />
+                            ))
+                        }
+                    </ul>
+                </div>
+            
             
             <div className="chat-container__nav">
                 <button 
