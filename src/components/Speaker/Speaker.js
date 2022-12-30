@@ -5,14 +5,16 @@ import './__form/speaker__form.css';
 import './__message-field/speaker__message-field.css';
 import './__name/speaker__name.css';
 import './__message/speaker__message.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import talkSVG from '../../images/icons/talk.svg';
 
 function Speaker(props) {
 
+    const inputWritingMessage = useRef(null)
+
     const [hour, setHour] = useState(String(new Date().getHours()).padStart(2, '0'));
     const [minutes, setMinutes] = useState(String(new Date().getMinutes()).padStart(2, '0'));
-    
+
     useEffect(() => {
         setInterval(() => tick(), 60*1000);
         }, [])
@@ -27,7 +29,9 @@ function Speaker(props) {
 
     useEffect(() => {
         setSpeakerName(props.currentSpeaker);
-    }, [props.currentSpeaker])
+        props.handleCurrentInput(inputWritingMessage);
+
+    }, [props.currentSpeaker, props])
 
     function handleChangeSpeaker(e) {
         e.preventDefault();
@@ -47,6 +51,7 @@ function Speaker(props) {
                     <input 
                         className="speaker__message" 
                         type="text" 
+                        ref={inputWritingMessage}
                         placeholder="הקלד/י כאן מה שאת/ה רוצה לומר..." 
                         value={messageContent} 
                         onChange={(e) => setMessageContent(e.target.value)}

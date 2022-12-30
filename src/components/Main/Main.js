@@ -17,7 +17,12 @@ function Main(props) {
     const [participentsList, setParticipentsList] = useState([]);
     const [currentSpeaker, setCurrentSpeaker] = useState('דובר');
     const [messagesContentList, setMessageContentList] = useState([]);
-
+    const [activeInput, setActiveInput] = useState(null);
+    
+    function handleCurrentInput(currentInput) {
+        setActiveInput(currentInput);
+    }
+    
     function closeAllPopup() {
         setPopupAddParticipentIsOpen(false);
         setPopupContentIsOpen(false);
@@ -73,11 +78,13 @@ function Main(props) {
                 handlePopupOpen={handleAddParticipentOpen}
                 participentsList={participentsList}
                 handleCurrentSpeaker={handleCurrentSpeaker}
+                handleCurrentInput={activeInput}
 
             />
 
             <Speaker 
                 currentSpeaker={currentSpeaker}
+                handleCurrentInput={handleCurrentInput}
                 handleMessagesList={handleMessagesList}
             />
 

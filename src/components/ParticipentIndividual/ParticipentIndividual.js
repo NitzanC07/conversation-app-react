@@ -2,6 +2,7 @@ function ParticipentIndividual(props) {
 
     function handleCurrentSpeaker() {
         props.handleCurrentSpeaker(props.name)
+        props.handleCurrentInput.current.focus();
     }
 
     return(

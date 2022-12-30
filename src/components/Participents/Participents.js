@@ -32,6 +32,7 @@ function Participents(props) {
                                 key={i}
                                 name={participent}
                                 handleCurrentSpeaker={props.handleCurrentSpeaker}
+                                handleCurrentInput={props.handleCurrentInput}
                             />
                         ))
                     }
