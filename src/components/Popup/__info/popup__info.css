@@ -1,4 +1,12 @@
 .popup__info {
     width: 85%;
     margin: 20px auto;
+    padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .popup__info {
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+    }
 }

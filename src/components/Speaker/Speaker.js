@@ -10,30 +10,21 @@ import talkSVG from '../../images/icons/talk.svg';
 
 function Speaker(props) {
 
-    const inputWritingMessage = useRef(null)
-
+    const [speakerName, setSpeakerName] = useState('דובר');
+    const [messageContent, setMessageContent] = useState('');
+    const inputWritingMessage = useRef(null);
     const [hour, setHour] = useState(String(new Date().getHours()).padStart(2, '0'));
     const [minutes, setMinutes] = useState(String(new Date().getMinutes()).padStart(2, '0'));
 
-    useEffect(() => {
-        setInterval(() => tick(), 60*1000);
-        }, [])
-    
-    function tick() {
-        setHour(String(new Date().getHours()).padStart(2, '0'));
-        setMinutes(String(new Date().getMinutes()).padStart(2, '0'));
-    }
-
-    const [speakerName, setSpeakerName] = useState('דובר')
-    const [messageContent, setMessageContent] = useState('');
-
+    // Change the name of the current speaker, and focus on the input message field.
     useEffect(() => {
         setSpeakerName(props.currentSpeaker);
         props.handleCurrentInput(inputWritingMessage);
 
     }, [props.currentSpeaker, props])
 
-    function handleChangeSpeaker(e) {
+    // Call to the function from the Main component with the details of the current message.
+    function handleSendMessage(e) {
         e.preventDefault();
         props.handleMessagesList({ 
             speakerName, 
@@ -43,9 +34,19 @@ function Speaker(props) {
         setMessageContent('');
     }
 
+    // Create a time stamp for any message that sends to the ChatContainer.
+    useEffect(() => {
+        setInterval(() => tick(), 60*1000);
+        }, [])
+    
+    function tick() {
+        setHour(String(new Date().getHours()).padStart(2, '0'));
+        setMinutes(String(new Date().getMinutes()).padStart(2, '0'));
+    }
+
     return(
-        <section className="speaker" onSubmit={handleChangeSpeaker}>
-            <form className='speaker__form'>
+        <section className="speaker">
+            <form className='speaker__form' onSubmit={handleSendMessage}>
                 <div className="speaker__message-field">
                     <h2 className="speaker__name">{speakerName}:</h2>
                     <input 

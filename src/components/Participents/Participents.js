@@ -18,7 +18,9 @@ function Participents(props) {
     }, [props.participentsList])
 
     function openAddParticipentPopup() {
-        props.handlePopupOpen()
+        props.handlePopupOpen();
+        
+        // props.handleCurrentInput.current.focus();
     }
 
     return(

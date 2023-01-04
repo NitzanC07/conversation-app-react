@@ -4,17 +4,24 @@ import '../Popup/__form/__input-field/popup__form__input-field.css';
 import '../Popup/__form/__label/popup__form__label.css';
 import '../Popup/__form/__submit-button/popup__form__submit-button.css';
 import Popup from "../Popup/Popup";
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function PopupAddParticipent(props) {
 
-    const [participentName, setParticipentName] = useState('')
+    const [participentName, setParticipentName] = useState('');
+    const inputNewParticipent = useRef(null);
+
+    useEffect(() => {
+        if(props.isOpen) {
+            inputNewParticipent.current.focus()
+        }
+    })
 
     function submitAddNewPerson(e) {
         e.preventDefault();
         props.createNewParticipent(participentName);
         setParticipentName('');
-    }
+    };
 
     return(
         <Popup 
@@ -31,6 +38,7 @@ function PopupAddParticipent(props) {
                             name="message-content"
                             type="text" 
                             placeholder="הכנס את שמך"
+                            ref={inputNewParticipent}
                             value={participentName || ''}
                             onChange={(e) => setParticipentName(e.target.value)}
                             required 

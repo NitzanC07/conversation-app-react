@@ -28,6 +28,7 @@ function Main(props) {
         setPopupContentIsOpen(false);
         setPopupSendEmailIsOpen(false);
         setPopupGuideIsOpen(false);
+        setActiveInput(null)
     }
     function handleAddParticipentOpen() {
         setPopupAddParticipentIsOpen(true);
@@ -79,7 +80,6 @@ function Main(props) {
                 participentsList={participentsList}
                 handleCurrentSpeaker={handleCurrentSpeaker}
                 handleCurrentInput={activeInput}
-
             />
 
             <Speaker 

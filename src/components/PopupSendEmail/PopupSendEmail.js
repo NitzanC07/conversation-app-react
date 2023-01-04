@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Popup from "../Popup/Popup";
 
 function PopupSendEmail(props) {
 
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
+    const inputEmail = useRef(null);
+
+    useEffect(() => {
+        if(props.isOpen) {
+            inputEmail.current.focus();
+        }
+    })
 
     function submitSendEmail(e) {
         e.preventDefault();
@@ -26,6 +33,7 @@ function PopupSendEmail(props) {
                         <input 
                             className="popup__form__input popup__input_type_email" 
                             type="email" 
+                            ref={inputEmail}
                             placeholder="הכנס דואר אלקטרוני"
                             value={email || ''}
                             onChange={(e) => setEmail(e.target.value)}
