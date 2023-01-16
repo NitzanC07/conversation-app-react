@@ -11,7 +11,7 @@ function PopupSendEmail(props) {
         if(props.isOpen) {
             inputEmail.current.focus();
         }
-    })
+    }, [props.isOpen])
 
     function submitSendEmail(e) {
         e.preventDefault();
