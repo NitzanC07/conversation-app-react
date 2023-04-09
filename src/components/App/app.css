@@ -7,5 +7,15 @@
   display: flex;
   flex-direction: column;
   justify-content:space-evenly;
-  background-color: rgb(19, 0, 88);
+  background-color: #92794F;
 }
+
+/** Colors template:
+    Page background: #92794F.
+    Main components in the page: #92794F with 90% opacity.
+    Stable buttons: #DDCAB2
+    Participents buttons: 
+      Background: #92794F
+      Text: #F1ECE4
+    Header & Footer text: #F1ECE4
+*/

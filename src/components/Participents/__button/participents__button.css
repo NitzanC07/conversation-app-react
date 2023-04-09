@@ -4,9 +4,8 @@
     margin: 0 0 15px;
     cursor: pointer;
     font-size: 20px;
-    background-color: rgba(194, 253, 255, 1);
-    background-color: rgba(221, 255, 194, 1);
-    /* background-image: url('../../../images/add-person-icon.svg'); */
+    color: #F1ECE4;
+    background-color: #DDCAB2;
     background-position: center;
     background-size: 50px;
     background-repeat: no-repeat;
@@ -16,8 +15,7 @@
     overflow: hidden;
 }
 .participents__button:hover {
-    background-color: rgba(194, 253, 255, 0.7);
-    background-color: rgba(221, 255, 194, 0.7);
+    background-color: rgba(221, 202, 178, 0.9);
     box-shadow: 0px 0px 5px #555;
 }
 

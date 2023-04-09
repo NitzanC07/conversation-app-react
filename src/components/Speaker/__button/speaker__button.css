@@ -4,8 +4,7 @@
     margin: 15px 0;
     cursor: pointer;
     font-size: 20px;
-    background-color: rgba(194, 253, 255, 1);
-    background-color: rgba(221, 255, 194, 1);
+    background-color: #DDCAB2;;
     background-position: center;
     background-size: 50px;
     background-repeat: no-repeat;
@@ -16,8 +15,7 @@
 }
 
 .speaker__button:hover {
-    background-color: rgba(194, 253, 255, 0.7);
-    background-color: rgba(221, 255, 194, 0.7);
+    background-color: rgba(221, 202, 178, 0.6);
     box-shadow: 0px 0px 5px #555;
 }
 
