@@ -11,6 +11,8 @@ function PopupContent(props) {
         >
             <div className="popup__info">
                 <p className='popup__info__text'>מטרת היישום לאפשר למי שלא יכול לדבר בקול להביע דעתו.</p>
+                <p className='popup__info__question'>יעד אישי</p>
+                <p className='popup__info__answer'>אני מקליד עם כל אחד, בכל מקום, מביע את דעתי בהיר וברור בלי בעיות, עובר מילה אחר מילהומשפטעם עצמאות.</p>
                 <p className='popup__info__question'>מי אתה ומה היא הקלדה בשבילך?</p>
                 <p className='popup__info__answer'>שמי אורי והקלדה היא דרך להביע את מחשבותיי ואת הרגשות והרצונות שלי. הקלדה היא הפה שלי, באמצעותה אני מתקשר עם משפחה ועם אנשים סביבי</p>
                 <p className='popup__info__question'>במה אתה משתמש בהקלדה היום?</p>
