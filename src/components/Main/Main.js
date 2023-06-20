@@ -60,13 +60,13 @@ function Main(props) {
     }
 
     function submitSendEmail(email, subject) {
-        console.log('Send E-Mail...');
-        console.log(messagesContentList);
-        let conversationStamp
+        // console.log("Sent email: ", messagesContentList);
+        let conversationStamp = ''
         messagesContentList.forEach(messageData => {
+            console.log('message data:', messageData);
             conversationStamp += `${messageData.speakerName} (${messageData.timeStamp}): ${messageData.messageContent}%0D%0A`
         })
-        console.log(conversationStamp);
+        console.log("Conversation: ", conversationStamp);
 
         window.open(`mailto:${email}?subject=${subject}&body=${conversationStamp}`)
         closeAllPopup();
