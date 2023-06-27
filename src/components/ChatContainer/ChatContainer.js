@@ -9,6 +9,8 @@ import './__title/chat-container__title.css';
 import emailIcon from '../../images/icons/email-icon.svg';
 import guideIcon from '../../images/icons/guide-icon.svg';
 import infoIcon from '../../images/icons/info-icon.svg';
+import learningIcon from '../../images/icons/learning.svg';
+import freeWriteIcon from '../../images/icons/pencil-icon.svg';
 import { useEffect, useState } from 'react';
 import ChatOneMessage from '../ChatOneMessage/ChatOneMessage';
 
@@ -32,6 +34,14 @@ function ChatContainer(props) {
         props.handlePopupGuideOpen();
     }
 
+    function trainingTyping() {
+        console.log("אימון הקלדה");
+    }
+
+    function freeWrite() {
+        console.log("כתיבה חופשית");
+    }
+
     return (
         <section className="chat-container">
             <h2 className="chat-container__title">חלון שיחה:</h2>    
@@ -52,6 +62,16 @@ function ChatContainer(props) {
             </div>
             
             <div className="chat-container__nav">
+                <button 
+                    className="chat-container__button chat-container__button__training"
+                    onClick={trainingTyping}>
+                    <img className='chat-container__button-icon' src={learningIcon} alt='Information about the application' />
+                </button>
+                <button 
+                    className="chat-container__button chat-container__button__free-write"
+                    onClick={freeWrite}>
+                    <img className='chat-container__button-icon' src={freeWriteIcon} alt='Information about the application' />
+                </button>
                 <button 
                     className="chat-container__button chat-container__button__send-email"
                     onClick={openPopupSendEmail}
