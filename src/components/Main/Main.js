@@ -7,6 +7,7 @@ import PopupAddParticipent from '../PopupAddParticipent/PopupAddParticipent';
 import PopupContent from '../PopupContent/PopupContent';
 import PopupSendEmail from '../PopupSendEmail/PopupSendEmail';
 import PopupGuide from '../PopupGuide/PopupGuide';
+import PopupFreeWriting from '../PopupFreeWriting/PopupFreeWriting';
 
 function Main(props) {
 
@@ -14,6 +15,7 @@ function Main(props) {
     const [popupContentIsOpen, setPopupContentIsOpen] = useState(false);
     const [popupSendEmailIsOpen, setPopupSendEmailIsOpen] = useState(false);
     const [popupGuideIsOpen, setPopupGuideIsOpen] = useState(false);
+    const [popupFreeWritingIsOpen, setPopupFreeWritingIsOpen] = useState(false);
     const [participentsList, setParticipentsList] = useState([]);
     const [currentSpeaker, setCurrentSpeaker] = useState('דובר');
     const [messagesContentList, setMessageContentList] = useState([]);
@@ -28,6 +30,7 @@ function Main(props) {
         setPopupContentIsOpen(false);
         setPopupSendEmailIsOpen(false);
         setPopupGuideIsOpen(false);
+        setPopupFreeWritingIsOpen(false);
         setActiveInput(null)
     }
     function handleAddParticipentOpen() {
@@ -44,6 +47,10 @@ function Main(props) {
 
     function handlePopupGuideOpen() {
         setPopupGuideIsOpen(true);
+    }
+
+    function handlePopupFreeWriting() {
+        setPopupFreeWritingIsOpen(true);
     }
 
     function createParticipentsList(newUser) {
@@ -92,6 +99,7 @@ function Main(props) {
                 handlePopupContentOpen={handlePopupContentPopupOpen}
                 handlePopupSendEmailOpen={handlePopupSendEmailOpen}
                 handlePopupGuideOpen={handlePopupGuideOpen}
+                handlePopupFreeWriting={handlePopupFreeWriting}
                 messagesContentList={messagesContentList}
             />
 
@@ -109,6 +117,11 @@ function Main(props) {
                 isOpen={popupSendEmailIsOpen}
                 onClose={closeAllPopup}
                 onSubmit={submitSendEmail}
+            />
+
+            <PopupFreeWriting 
+                isOpen={popupFreeWritingIsOpen}
+                onClose={closeAllPopup}
             />
 
             <PopupGuide 

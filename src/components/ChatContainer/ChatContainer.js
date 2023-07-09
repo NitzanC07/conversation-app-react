@@ -40,6 +40,7 @@ function ChatContainer(props) {
 
     function freeWrite() {
         console.log("כתיבה חופשית");
+        props.handlePopupFreeWriting();
     }
 
     return (
