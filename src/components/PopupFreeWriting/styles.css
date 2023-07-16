@@ -1,14 +1,43 @@
 .free-writing-form {
     display: flex;
     flex-direction: column;
-    background-image: url('https://img.freepik.com/premium-vector/notebook-paper-background-lined-notebook-paper_322958-1073.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 20px;
+    padding: 0;
 }
 
 #writingArea {
     background-color: transparent;
-    width: 82%;
+    width: 100%;
     margin: 32px auto 15px;
     border: 0;
+    background-image: url('https://img.freepik.com/premium-vector/notebook-paper-background-lined-notebook-paper_322958-1073.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Rubik' , 'Yehuda', 'Gveret-levin', Arial;
+    font-size: 22px;
+    line-height: 24px;
+}
+
+#writingArea:hover {
+    box-shadow: 3px 3px 10px #666;
+}
+
+.save-button {
+    width: 250px;
+    height: 50px;
+    margin: 15px 0;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #DDCAB2;;
+    background-position: center;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    border: 0px solid #000;
+    border-radius: 35px;
+    box-shadow: 4px 4px 5px #555;
+}
+
+.save-button:hover {
+    background-color: rgba(221, 202, 178, 1);
+    box-shadow: 0px 0px 5px #555;
 }
