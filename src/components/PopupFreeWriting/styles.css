@@ -1,21 +1,23 @@
 .free-writing-form {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 0;
     padding: 0;
+    width: 90%;
 }
 
 #writingArea {
     background-color: transparent;
-    width: 100%;
+    width: 90%;
     margin: 32px auto 15px;
+    padding: 0 70px 0 20px;
     border: 0;
-    background-image: url('https://img.freepik.com/premium-vector/notebook-paper-background-lined-notebook-paper_322958-1073.jpg');
+    background-image: url('../../images/notebook-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Rubik' , 'Yehuda', 'Gveret-levin', Arial;
-    font-size: 22px;
-    line-height: 24px;
+    font-size: 19px;
+    line-height: 21px;
 }
 
 #writingArea:hover {

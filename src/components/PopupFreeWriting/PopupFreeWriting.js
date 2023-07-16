@@ -13,6 +13,7 @@ function PopupFreeWriting(props) {
     }
     return(
         <Popup 
+            className="popup popup__free-writing"
             name="free-writing"
             title="כתיבה חופשית"
             isOpen={props.isOpen}
