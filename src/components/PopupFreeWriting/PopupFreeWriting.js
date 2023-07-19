@@ -20,13 +20,15 @@ function PopupFreeWriting(props) {
             onClose={props.onClose}
         >
             <form className='free-writing-form' onSubmit={saveWriting}>
-                <label for='writingArea' className='popup__info__text'>כתוב כל מה שעולה לך לראש...</label>
-                <textarea 
-                    id='writingArea' 
-                    rows={10} 
-                    value={text || ''}
-                    onChange={(e) => setText(e.target.value)} 
-                />
+                <div className='writingAreaContainer'>
+                    <label for='writingArea' className='popup__info__text'>זה המקום לכתוב באופן חופשי.</label>
+                    <textarea 
+                        id='writingArea' 
+                        rows={10} 
+                        value={text || ''}
+                        onChange={(e) => setText(e.target.value)} 
+                    />
+                </div>               
                 <button className='save-button' type='submit'>שמור כתיבה</button>
             </form>
         </Popup>
