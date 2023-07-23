@@ -36,6 +36,7 @@ function ChatContainer(props) {
 
     function trainingTyping() {
         console.log("אימון הקלדה");
+        props.handlePopupTypingTraining();
     }
 
     function freeWrite() {

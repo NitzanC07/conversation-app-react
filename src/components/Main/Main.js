@@ -8,6 +8,7 @@ import PopupContent from '../PopupContent/PopupContent';
 import PopupSendEmail from '../PopupSendEmail/PopupSendEmail';
 import PopupGuide from '../PopupGuide/PopupGuide';
 import PopupFreeWriting from '../PopupFreeWriting/PopupFreeWriting';
+import PopupTypingTraining from '../PopupTypingTraining/PopupTypingTraining';
 
 function Main(props) {
 
@@ -16,6 +17,7 @@ function Main(props) {
     const [popupSendEmailIsOpen, setPopupSendEmailIsOpen] = useState(false);
     const [popupGuideIsOpen, setPopupGuideIsOpen] = useState(false);
     const [popupFreeWritingIsOpen, setPopupFreeWritingIsOpen] = useState(false);
+    const [popupTypingTrainingIsOpen, setPopupTypingTrainingIsOpen] = useState(false);
     const [participentsList, setParticipentsList] = useState([]);
     const [currentSpeaker, setCurrentSpeaker] = useState('דובר');
     const [messagesContentList, setMessageContentList] = useState([]);
@@ -31,6 +33,7 @@ function Main(props) {
         setPopupSendEmailIsOpen(false);
         setPopupGuideIsOpen(false);
         setPopupFreeWritingIsOpen(false);
+        setPopupTypingTrainingIsOpen(false);
         setActiveInput(null)
     }
     function handleAddParticipentOpen() {
@@ -51,6 +54,10 @@ function Main(props) {
 
     function handlePopupFreeWriting() {
         setPopupFreeWritingIsOpen(true);
+    }
+
+    function handlePopupTypingTraining() {
+        setPopupTypingTrainingIsOpen(true);
     }
 
     function createParticipentsList(newUser) {
@@ -100,6 +107,7 @@ function Main(props) {
                 handlePopupSendEmailOpen={handlePopupSendEmailOpen}
                 handlePopupGuideOpen={handlePopupGuideOpen}
                 handlePopupFreeWriting={handlePopupFreeWriting}
+                handlePopupTypingTraining={handlePopupTypingTraining}
                 messagesContentList={messagesContentList}
             />
 
@@ -121,6 +129,11 @@ function Main(props) {
 
             <PopupFreeWriting 
                 isOpen={popupFreeWritingIsOpen}
+                onClose={closeAllPopup}
+            />
+
+            <PopupTypingTraining 
+                isOpen={popupTypingTrainingIsOpen}
                 onClose={closeAllPopup}
             />
 
