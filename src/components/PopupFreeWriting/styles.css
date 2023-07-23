@@ -53,7 +53,7 @@
     margin: 15px 0;
     padding: 10px 35px;
     cursor: pointer;
-    background-color: #DDCAB2;;
+    background-color: rgb(115, 145, 200);
     background-position: center;
     background-size: 50px;
     background-repeat: no-repeat;
@@ -63,9 +63,10 @@
     font-family: 'Rubik', 'Yehuda', 'Gveret-levin', Arial;
     font-size: 18px;
     line-height: 20px;
+    color: #fff;
 }
 
 .save-button:hover {
-    background-color: rgba(221, 202, 178, 1);
+    background-color: rgba(115, 145, 200, 0.8);
     box-shadow: 0px 0px 5px #555;
 }

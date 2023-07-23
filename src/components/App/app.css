@@ -7,7 +7,8 @@
   display: flex;
   flex-direction: column;
   justify-content:space-evenly;
-  background-color: #92794F;
+  /* background-color: #92794F; */
+  background-color: #52688F;
 }
 
 /** Colors template:

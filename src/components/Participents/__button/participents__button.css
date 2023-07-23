@@ -6,6 +6,7 @@
     font-size: 20px;
     color: #F1ECE4;
     background-color: #DDCAB2;
+    background-color: rgb(115, 145, 200);
     background-position: center;
     background-size: 50px;
     background-repeat: no-repeat;
@@ -15,7 +16,8 @@
     overflow: hidden;
 }
 .participents__button:hover {
-    background-color: rgba(221, 202, 178, 0.9);
+    /* background-color: rgba(221, 202, 178, 0.9); */
+    background-color: rgba(115, 145, 200, 0.6);
     box-shadow: 0px 0px 5px #555;
 }
 
